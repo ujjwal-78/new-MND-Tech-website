@@ -1,0 +1,101 @@
+@media (max-width: 1199px) and (min-width: 768px) {
+  /********************* header section  *********************/
+  /* banner  */
+  .home-banner .banner {
+    background-attachment: initial;
+    max-height: 45vw;
+  }
+  .home-banner .banner-title {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+  .home-banner .left-item,
+  .home-banner .right-item {
+    bottom: 3rem;
+  }
+
+  /*********************** about us sec  ***********************/
+  .about-us {
+    background-size: cover;
+  }
+
+  .about-us .why-us::before {
+    display: none;
+  }
+
+  .about-us .why-us .why-us-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .why-us .box .image {
+    padding-right: 1rem;
+  }
+
+  .why-us,
+  .reviews {
+    padding: 3rem !important;
+  }
+}
+
+@media (max-width: 991px)  {
+  /************************* how-it-works sec  *************************/
+  .circle-contents {
+    display: block;
+  }
+
+  .circle-contents .circle {
+    float: none;
+    margin: 3rem auto 0;
+    width: 17rem;
+    height: 17rem;
+  }
+  
+  .circle-contents .circle:nth-child(2) {
+    width: 17rem;
+    height: 17rem;
+
+  }
+
+  .circle-contents .circle .circle-images {
+    height: 6rem;
+  }
+
+  .circle-contents .circle,
+  .circle-contents .circle:nth-child(2) {
+    float: none;
+    margin: 3rem auto 0;
+  }
+
+  .circle-contents .circle:nth-child(1) .circle-images,
+  .circle-contents .circle:nth-child(3) .circle-images {
+    height: 6rem;
+  }
+
+  .circle-contents .circle h6 
+  {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .circle-contents .circle p {
+    font-size: 0.8rem;
+  }
+  .circle-contents .circle h6 span {
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /********************* header section  *********************/
+  /* banner  */
+  .home-banner .banner {
+    height: auto;
+    background-image: url("/assests/img/home-banner-2.jpg");
+    padding: 6vw 1.5rem;
+  }
+}
