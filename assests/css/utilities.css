@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Merriweather&family=Nanum+Gothic&family=Odibee+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+}
+
+ul {
+  list-style: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  border-radius: 2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-family: "Cairo", sans-serif;
+}
+
+.btn-danger {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.btn-danger:hover {
+  /* background-color: #ff00003b; */
+  background-color: #49b3db;
+  border-color: #49b3db;
+}
+
+.btn-outline-danger {
+  color: #fff;
+  background-color: rgba(252, 63, 28, 0.3);
+  border-color: #fc3f1d;
+}
+
+.btn-outline-danger:hover {
+  background-color: rgba(73, 179, 219, 0.3);
+  border-color: #49b3db;
+}
+
+.btn-blue {
+  background-color: #49b3db;
+  color: #fff;
+}
+
+.btn-red {
+  background-color: #fc3f1d;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: rgba(73, 179, 219, 0.3);
+  border-color: #49b3db;
+  color: #fff;
+}
+
+.btn-red:hover {
+  color: #fff;
+  background-color: rgba(252, 63, 28, 0.3);
+  border-color: #fc3f1d;
+}
+
+.banner-title {
+  font-size: 3.1rem;
+  font-weight: bolder;
+  letter-spacing: 0.05em;
+  display: block;
+  font-family: "Odibee Sans", cursive;
+}
+
+.sec-title {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+.sec-description {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 65rem;
+  margin: 0 auto;
+  color: #666;
+}
+

@@ -1,43 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+/************************************************  ************************************************/
+/* followings are the sequence-wise sections
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    1. header
+      1.1. sidemenu-toggler
+      1.2. sidemenu
+      1.3. header-banner
+        1.3.1. home-banner 
+        1.3.2. it_businesses & it_contract &       it_services & it_consultancy banner
+        1.3.3. it-businesses banner
+        1.3.4. it-contracts banner
+        1.3.5. it_services banner
+        1.3.6. it_consultancy banner
+        1.3.7. device-repair banner
+    2. our-partners
+      2.1. slider
+    3. how-it-works
+    4. about-us 
+      4.1. left-sec
+      4.2. right-sec
+    5. floating-whatsapp 
+    6. footer
+      6.1. footer-logo
+      6.2. footer-links 
+      6.3. first-row
+      6.4. second-row
+      6.5. last-row
+    7. it-businesses section
+      7.1. sticky business form
+      7.2. sticky-trigger getStarted btn
+      7.3. it-business summary
+      7.4. divider
+      7.5. it-business services
+      7.6. it-platform
+      7.7. it-business form
+    8. it-contracts
+      8.1. it-contracts getStarted btn
+      8.2. it-contracts features
+      8.3. it-contracts steps
+    9. it-services
+      9.1. advantages
+    10. it_consultancy
+      10.1. it-projects
+    11. device_repair
 
-body {
-  /* font-family: 'Merriweather', serif; */
-  font-family: "Gotham Book", sans-serif;
-}
+*/
+/************************************************  ************************************************/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Merriweather", serif;
-}
 
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.btn {
-  border-radius: 2rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-}
-
-/*************************************** header ***************************************/
+/************************************************* header starts *************************************************/
 .wrapper {
   position: relative;
   right: 0;
@@ -52,7 +62,7 @@ img {
   z-index: 1001;
   top: 0;
   left: 0;
-  height: 8.5rem;
+  height: 7.3rem;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.671) 0%,
@@ -67,6 +77,7 @@ img {
   z-index: 1;
   top: 0;
   left: 0;
+  /* right: 0; */
   bottom: -2rem;
   opacity: 0.8;
   transition: all 0.5s ease;
@@ -102,7 +113,7 @@ img {
 }
 .header .logo img {
   display: block;
-  width: 124px;
+  width: 7rem;
   margin-top: -17px;
   border-top-left-radius: 50%;
   border-top-right-radius: 7%;
@@ -127,18 +138,7 @@ img {
   margin-left: 1rem;
 }
 
-.btn-outline-danger {
-  color: #fff;
-  background-color: rgba(252, 63, 28, 0.3);
-  border-color: #fc3f1d;
-}
-
-.btn-outline-danger:hover {
-  background-color: rgba(73, 179, 219, 0.3);
-  border-color: #49b3db;
-}
-
-/* sidemenu  */
+/************** sidemenu toggler **************/
 .header .sidemenu-toggler {
   float: right;
   position: absolute;
@@ -167,18 +167,20 @@ img {
 .header .sidemenu-toggler:hover > span:nth-child(3) {
   width: 100%;
 }
+/************* sidemenu toggler ends *************/
 
-.header .sidemenu {
+/******************* sidemenu *******************/
+.sidemenu {
   position: fixed;
   top: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.96);
   box-shadow: 0 8px 32px 0 rgba(11, 11, 11, 0.37);
   backdrop-filter: blur(34px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 45%;
+  border: 1px solid rgba(2, 2, 2, 0.18);
+  width: 41%;
   height: 100vh;
-  z-index: 999;
+  z-index: 1002;
   padding: 4rem;
   color: white;
   transform: translate3d(100%, 0, 0);
@@ -186,17 +188,17 @@ img {
   overflow: hidden;
 }
 
-.header .sidemenu hr {
+.sidemenu hr {
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-top: 1px solid rgb(80, 79, 79);
 }
 
-.header .sidemenu.active {
+.sidemenu.active {
   transform: translate3d(0, 0, 0);
 }
 
-.header .sidemenu .close {
+.sidemenu .close {
   height: 30px;
   width: 30px;
   display: block;
@@ -205,8 +207,8 @@ img {
   top: 24px;
 }
 
-.header .sidemenu .close::before,
-.header .sidemenu .close::after {
+.sidemenu .close::before,
+.sidemenu .close::after {
   content: "";
   position: absolute;
   top: 0;
@@ -216,39 +218,46 @@ img {
   background: rgb(255, 254, 254);
 }
 
-.header .sidemenu .close::before {
+.sidemenu .close::before {
   transform: rotate(45deg);
 }
-.header .sidemenu .close::after {
+.sidemenu .close::after {
   transform: rotate(-45deg);
 }
 
-.header .sidemenu h1 {
-  font-weight: 599;
+.sidemenu h1 {
+  font-weight: 600;
+  font-size: 2.18rem;
+}
+.sidemenu .name {
+  color: #00b7ff;
 }
 
-.header .sidemenu nav ul {
+.sidemenu nav ul {
   padding-top: 30px;
   list-style: none;
 }
-.header .sidemenu nav li {
+.sidemenu nav li {
   padding: 15px 0;
 }
-.header .sidemenu nav a {
+.sidemenu nav a {
   font-size: 1.3rem;
   color: #fff;
 }
 
-.header .sidemenu nav a:hover {
-  color: #fc3f1d;
+.sidemenu nav a:hover {
+  color: #ff0000;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
+/***************** sidemenu ends *****************/
 
-/* header banner section  */
+/*********************** header banner section  ***********************/
 section {
   display: block;
 }
 
+/************** home-banner  **************/
 .home-banner .banner {
   background-image: url("/assests/img/home-banner.jpg");
   padding: 0;
@@ -293,32 +302,114 @@ section {
   margin: 0;
   padding: 0.1rem 1.5rem;
 }
+/* ends */
 
-.btn-blue {
-  background-color: #49b3db;
-  color: #fff;
+/* it_businesses & it_contracts & it_services & it_consultancy banner  */
+.business,
+.contracts,
+.services,
+.consultancy,
+.device-repair {
+  padding-bottom: 1rem;
 }
 
-.btn-red {
-  background-color: #fc3f1d;
-  color: #fff;
+.business-banner .banner,
+.contracts-banner .banner,
+.services-banner .banner,
+.consultancy-banner .banner,
+.device-repair-banner .banner {
+  position: relative;
+  height: 22rem;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.business-banner .banner::before,
+.contracts-banner .banner::before,
+.services-banner .banner::before,
+.consultancy-banner .banner::before,
+.device-repair-banner .banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.business-banner .banner::after,
+.contracts-banner .banner::after,
+.services-banner .banner::after,
+.consultancy-banner .banner::after,
+.device-repair-banner .banner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  bottom: -1px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+/* it-businesses banner  */
+.business-banner .banner {
+  background-image: url("/assests/img/business-banner.jpg");
 }
 
-.btn-blue:hover {
-  background-color: rgba(73, 179, 219, 0.3);
-  border-color: #49b3db;
-  color: #fff;
+.business-banner .banner-title {
+  font-size: 6rem;
+  font-weight: bolder;
 }
 
-.btn-red:hover {
-  color: #fff;
-  background-color: rgba(252, 63, 28, 0.3);
-  border-color: #fc3f1d;
+/* it-contracts banner  */
+.contracts-banner .banner {
+  background-image: url("/assests/img/contracts-bg.jpg");
+}
+.contracts-banner .banner-title {
+  font-size: 3.5rem;
+  padding-top: 1.5rem;
 }
 
+/* it_services banner */
+.services-banner .banner {
+  background-image: url("/assests/img/services-banner.jpg");
+}
+.services-banner .banner-title {
+  font-size: 6rem;
+}
+/* it_consultancy banner */
+.consultancy-banner .banner {
+  background-image: url("/assests/img/it-consultancy-banner.jpg");
+}
+.consultancy-banner .banner-title {
+  font-size: 6rem;
+}
 
+/* device-repair banner  */
+.device-repair .banner {
+  background-image: url("/assests/img/device-repair-banner.jpg");
+}
+.device-repair .banner-title {
+  font-size: 5rem;
+}
+/****************************************** header ends  ******************************************/
 
-/***************************** our partners **************************** */
+/****************************************** our partners ******************************************/
 .our-costumers .container {
   padding: 4rem;
 }
@@ -331,16 +422,15 @@ section {
 }
 
 .our-costumers .our-content .inner {
-  max-width:89rem;
-  margin:0 auto;
+  max-width: 89rem;
+  margin: 0 auto;
 }
 
 .our-costumers .our-content h1 {
   font-weight: 800;
 }
 
-/* Slider */
-
+/********* Slider *********/
 .slick-slide {
   margin: 20px 20px;
 }
@@ -438,9 +528,9 @@ section {
 .slick-arrow.slick-hidden {
   display: none;
 }
+/****************************************** our partners ends******************************************/
 
 /****************************************************** how-it-works-sec ******************************************************/
-
 .how-it-works-sec {
   background-color: #f6fbfd;
   padding: 5rem 0;
@@ -448,21 +538,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-.sec-title {
-  font-size: 2.2rem;
-  line-height: 3rem;
-  color: #333333;
-  margin-bottom: 1rem;
-  font-weight: bolder;
-}
-
-.sec-description {
-  font-size: 1.2rem;
-  text-align: center;
-  max-width: 65rem;
-  margin: 0 auto;
 }
 
 .circle-contents {
@@ -541,6 +616,7 @@ section {
   font-size: 1.3rem;
   text-align: center;
 }
+/****************************************************** how-it-works-sec ends******************************************************/
 
 /************************************** about-us sec  **************************************/
 .about-us {
@@ -628,7 +704,7 @@ section {
   position: absolute;
   font-size: 80px;
   line-height: 1;
-  color: #757f9a;
+  color: #49b3db;
   font-style: normal;
 }
 
@@ -666,6 +742,7 @@ section {
   margin: 2rem;
   padding: 0.5rem;
 }
+/************************************** about-us sec ends **************************************/
 
 /************************************** floating-whatsapp **************************************/
 .floating-whatsapp {
@@ -692,12 +769,14 @@ section {
 .my-float:hover {
   color: #fff;
 }
+/************************************** floating-whatsapp ends **************************************/
 
 /********************************************************** footer sec  **********************************************************/
 .footer {
   background-color: #43454e;
   color: #fff;
   padding-bottom: 5rem;
+  margin-top: 4rem;
 }
 footer li {
   line-height: 1.3rem;
@@ -758,7 +837,7 @@ footer a:hover {
   margin-bottom: 2rem;
 }
 
-/* first-row-sec */
+/* first-row */
 #first-left-sec .device-list {
   display: flex;
 }
@@ -828,3 +907,662 @@ footer a:hover {
 .footer .footer-social a:hover {
   color: #32a1ce;
 }
+/********************************************************** footer sec ends **********************************************************/
+
+/************************************* it-businesses section starts *************************************/
+
+/******* sticky business form  *******/
+.sticky-form {
+  visibility: hidden;
+  position: fixed;
+  opacity: 1;
+  display: block;
+  padding: 2rem;
+  top: 65%;
+  right: 2rem;
+  margin-top: -18.35rem;
+  background-color: #fff;
+  box-shadow: 0 0 2.5rem 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 23rem;
+  text-align: center;
+  z-index: 100000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sticky-form.active {
+  display: block;
+  visibility: visible;
+}
+.sticky-form .text-center {
+  color: #2c2c2c;
+}
+.sticky-form h5 {
+  margin-bottom: 1rem;
+}
+
+.sticky-form .cancel {
+  position: relative;
+  left: 9rem;
+  bottom: 1rem;
+  color: #ff0000;
+}
+
+.sticky-form .form-control {
+  background-color: #f1f1f165;
+}
+
+/* sticky-trigger getStarted btn */
+.sticky-trigger {
+  position: fixed;
+  right: 0;
+  top: 27rem;
+  z-index: 1005;
+}
+
+.sticky-trigger:not(.fixed) {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 2rem !important;
+  border-radius: 50px !important;
+  margin-right: -2.6rem;
+  float: right;
+  box-shadow: 0 0 2.5rem 1px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-trigger .txt {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 6rem;
+  text-align: left;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* it-bussiness summary section  */
+.summary {
+  padding: 1rem 4rem;
+  margin-bottom: 3rem;
+}
+.summary .sec-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.summary .sec-description {
+  text-align: justify;
+}
+
+/************************* divider *************************/
+.divider {
+  width: 50%;
+  margin: 0 auto;
+}
+.divider::after {
+  content: "";
+  display: block;
+  height: 0.15rem;
+  background: linear-gradient(to right, #ffffff 0%, #e5e5e5 50%, #ffffff 100%);
+}
+
+/* it-bussiness partners */
+#partners .our-costumers .container {
+  padding: 0.2rem;
+}
+
+/* it-business services sec */
+.it-services {
+  padding: 7rem 0;
+}
+
+.it-services .sub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.it-services .sub-sec {
+  position: relative;
+  flex: 1;
+  padding-bottom: 8rem;
+}
+.it-services .sub-sec:nth-child(2) {
+  margin: 0 3%;
+}
+
+.it-services .sub-sec .inner {
+  padding: 0 1.5rem;
+}
+
+.it-services .sub-sec .text {
+  position: relative;
+  padding: 1.5rem;
+  margin-top: -5.2rem;
+  background-color: rgba(255, 255, 255, 0.966);
+  z-index: 2;
+}
+.it-services .sub-sec .image {
+  margin: 0 -2rem;
+}
+
+.it-services .sub-sec .s-title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  font-family: "Cairo", sans-serif;
+}
+.it-services .sub-sec .description {
+  color: #666;
+}
+.it-services .sub-sec .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sub-sec .content + .content {
+  margin-top: 1rem;
+}
+.sub-sec .content .content-img {
+  flex-basis: 5rem;
+}
+.sub-sec .content .content-txt {
+  flex: 1;
+}
+.sub-sec .content .content-txt .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+.sub-sec .overall {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.sub-sec .btn-danger {
+  position: absolute;
+  bottom: 4rem;
+  left: 5rem;
+  z-index: 4;
+}
+
+/*************** it-platform ***************/
+.platform {
+  background-image: url("/assests/img/platform-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  background-attachment: fixed;
+}
+.platform .sec-title {
+  color: #49b3db;
+  margin-bottom: 0.5rem;
+}
+.platform .sub-title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+.platform .contents {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("/assests/img/it-platform-center.png");
+  background-repeat: no-repeat;
+  background-position: 50% 34%;
+  background-size: 55%;
+}
+.platform .content {
+  flex-basis: 50%;
+  margin-bottom: 3.5rem;
+}
+.platform .content:nth-child(even) {
+  text-align: right;
+}
+.platform .content:nth-child(even) .text {
+  float: right;
+}
+.platform .content:nth-child(3) .description,
+.platform .content:nth-child(4) .description {
+  min-height: 0;
+}
+.platform .content .text {
+  max-width: 22rem;
+  padding: 1rem 1rem 1rem 0;
+  text-align: center;
+}
+.platform .content .title {
+  color: #49b3db;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-family: "Cairo", sans-serif;
+}
+.platform .content .description {
+  color: #fff;
+  font-size: 1rem;
+  min-height: 5.6rem;
+}
+
+/********************** it-business-form **********************/
+.business-form {
+  padding: 7rem 0;
+}
+.business-form .sec-title {
+  margin-bottom: 0;
+}
+.business-form .sub-title {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+}
+.business-form .left-sec,
+.business-form .right-sec {
+  width: 50%;
+  float: left;
+}
+.business-form .left-sec {
+  padding-right: 1rem;
+}
+.business-form .right-sec {
+  padding-left: 1rem;
+}
+
+.business-form .form-control {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  letter-spacing: 2px;
+  margin: 1.75rem 0;
+  border: none;
+}
+/************************************* it-businesses section ends *************************************/
+
+/************************************* it-contracts section starts *************************************/
+/* it-contracts-getStarted btn */
+.trigger-btn .sticky-trigger {
+  margin-left: calc(50% - 117px);
+  position: unset !important;
+  width: 234px !important;
+  float: unset !important;
+  margin-top: 1rem;
+  margin-bottom: -6rem;
+}
+
+.trigger-btn .sticky-trigger:not(.fixed) {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem !important;
+  border-radius: 50px !important;
+  margin-right: -2.6rem;
+  box-shadow: 0 0 2.5rem 1px rgba(0, 0, 0, 0.1);
+}
+
+.trigger-btn .sticky-trigger .txt {
+  margin-left: 0.5rem;
+  font-size: 1.56rem;
+  font-weight: 700;
+  width: 10rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* it-contracts-summary */
+.contract-summary {
+  padding: 9rem 0 0 0;
+}
+
+.contract-summary .description {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #666666;
+  line-height: 1.8rem;
+}
+
+.contract-summary p {
+  margin-bottom: 2.5rem;
+}
+
+/********* it_contracts features sec  *********/
+.features {
+  padding: 3rem 0 1rem;
+}
+
+.features .contents {
+  margin: 4rem 0 0 0;
+}
+
+.features .content {
+  display: flex;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.features .content .content-img {
+  flex-basis: 6rem;
+}
+.features .content .content-txt {
+  display: flex;
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.features .content-txt .title {
+  flex-basis: 25%;
+}
+
+.features .content-txt .desc {
+  color: #666;
+  flex-basis: 75%;
+  padding-left: 4rem;
+}
+.features .content:nth-child(even) {
+  background: #fff;
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(251, 251, 251, 1) 25%,
+    rgba(251, 251, 251, 1) 50%,
+    rgba(251, 251, 251, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(251, 251, 251, 1) 25%,
+    rgba(251, 251, 251, 1) 50%,
+    rgba(251, 251, 251, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(251, 251, 251, 1) 25%,
+    rgba(251, 251, 251, 1) 50%,
+    rgba(251, 251, 251, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#ffffff',GradientType=1 );
+}
+.features .content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(232, 232, 232, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(232, 232, 232, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(232, 232, 232, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+.features .content:last-child::after {
+  display: none;
+}
+
+/***************** it-contracts-steps  *****************/
+.contracts-steps {
+  padding: 5rem 0;
+  background-color: #f6fbfd;
+}
+.contracts-steps .contents {
+  display: flex;
+}
+.contracts-steps .content {
+  flex: 1;
+  position: relative;
+}
+.contracts-steps .content .content-img {
+  min-height: 10rem;
+}
+.contracts-steps .content .content-img img {
+  max-height: 5rem;
+  max-width: initial;
+}
+.contracts-steps .content .content-txt {
+  max-width: 13rem;
+  margin: 4rem auto 0;
+}
+.contracts-steps .content .count {
+  display: block;
+  margin: 0 auto 5rem;
+}
+.contracts-steps .content .title {
+  font-size: 1.28rem;
+}
+/*   */
+.contracts-steps .content::after,
+.it-projects .content::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  background: #fff;
+  background: linear-gradient(to bottom, #ffffff 0%, #e8e8e8 50%, #ffffff 100%);
+}
+
+.contracts-steps .content:last-child::after {
+  display: none;
+}
+/********************************************** it-contracts sec ends **********************************************/
+
+/********************************************** it-services sec  **********************************************/
+/* summary sec  */
+#it-services-summary .sec-description p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* get support & repairs */
+.get-support .sec-title {
+  margin-bottom: 0;
+}
+.get-support .sub-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #666;
+}
+.get-support .contents {
+  margin: 4rem auto 0;
+  max-width: 47rem;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*  */
+.get-support .content,
+.repairs .content {
+  margin-bottom: 4rem;
+  position: relative;
+  padding-bottom: 1rem;
+  transition: all 0.5s;
+  flex-basis: 33.33%;
+}
+.get-support .content:hover {
+  background-color: #ecf7fb;
+}
+.get-support .content:hover .title,
+.get-support .content:hover a {
+  color: #5fbcdf;
+}
+.get-support .content .content-img,
+.repairs .content .content-img {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+}
+.get-support .content .content-img img,
+.repairs .content .content-img img {
+  max-height: 3rem;
+  max-width: initial;
+}
+.get-support .title {
+  text-decoration: underline;
+  color: #ff0000;
+}
+.get-support .content-txt {
+  max-width: 22rem;
+  margin: 0 auto;
+}
+.get-support .content-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.get-support h4 {
+  font-size: 1rem;
+}
+/*********** advantages sec ***********/
+.advantages {
+  background-image: url("/assests/img/advantages-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0 7rem;
+}
+.advantages .image {
+  margin-bottom: 3rem;
+  height: 7rem;
+}
+.advantages .title {
+  color: #00b7ff;
+  min-height: 3rem;
+}
+.advantages .txt {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 18rem;
+}
+/* bottom-summary */
+.bottom-summary {
+  margin-bottom: 10rem;
+}
+.bottom-summary p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+  text-align: center;
+}
+.bottom-summary .first {
+  margin-bottom: 3rem;
+}
+/************************************************* it-services sec ends  *************************************************/
+
+/************************************************************* it_consultancy sec  *************************************************************/
+/* it-contsultancy-features */
+#consultancy-ft {
+  margin-bottom: 4rem;
+}
+#consultancy-ft .content-text {
+  flex: 1;
+}
+
+/* it-projects */
+.it-projects {
+  background-color: #fbfbfb;
+  padding: 4rem 0;
+}
+.it-projects .contents {
+  padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.it-projects .content {
+  position: relative;
+  padding: 0 2rem;
+  flex-basis: 25%;
+}
+.it-projects .content .content-img {
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.it-projects .content .content-img img {
+  max-height: 100%;
+  max-width: initial;
+}
+.it-projects .content-txt .title {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+/************************************************************* it_consultancy sec ends *************************************************************/
+
+/***************************************** DEvice_repair sec starts *****************************************/
+#device-advantage {
+  padding: 10rem 0 0 !important;
+}
+#device-advantage .content {
+  margin-bottom: 7rem;
+}
+
+#device-advantage .image {
+  margin-bottom: 1rem !important;
+  height: 6rem;
+}
+
+/* repairs sec */
+.repairs {
+  padding: 5rem 0 0;
+}
+.repairs .contents {
+  margin: 4rem auto 0;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.repairs .title {
+  text-decoration: underline;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.repairs .content-txt {
+  max-width: 16rem;
+  margin: 0 auto;
+  color: #666;
+}
+/* our-partners */
+#partners {
+  background-color: #f7f7f7;
+  padding-bottom: 3rem;
+}
+#partners .container {
+  padding: 2rem !important;
+}
+/***************************************** DEvice_repair sec endss *****************************************/
